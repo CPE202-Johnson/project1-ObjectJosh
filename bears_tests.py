@@ -33,6 +33,10 @@ class TestAssign1(unittest.TestCase):
     # test: False case -> number is negative
     def test_bear_08(self):
         self.assertFalse(bears(-3))
+    
+    # test: True case -> number "would be" stuck in infinite loop, testing "subtractor"
+    def test_bear_09(self):
+        self.assertTrue(bears(208))
 
 if __name__ == "__main__":
     unittest.main()
