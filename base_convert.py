@@ -4,14 +4,12 @@ def convert(num, b):
         num(int): input number
         b(int): base number
     Returns:
-        result_str(str): string representation of num in the base b
+        str: string representation of num in the base b
     """
     if num // b == 0:
-        return num
-    base = str(num % b)
+        return str(num)
+    base = num % b
     letter_list = ["A", "B", "C", "D", "E", "F", "G"]
     if num % b >= 10:
         base = letter_list[num % b - 10]
-    result_str = ""
-    result_str = result_str + str(convert(num // b, b)) + base
-    return result_str
+    return str(convert(num // b, b)) + str(base)
