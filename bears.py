@@ -20,7 +20,7 @@ def bears(n):
             reached_42 = True
     if n % 3 == 0 or n % 4 == 0 and not reached_42:
         subtractor = n % 10 * ((n // 10) % 10)
-        if bears(n - subtractor):
+        if bears(n - subtractor) and subtractor != 0:
             reached_42 = True
     if n % 5 == 0 and not reached_42:
         if bears(n - 42):
