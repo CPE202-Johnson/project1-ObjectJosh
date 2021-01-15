@@ -15,15 +15,15 @@ def bears(n):
     if n < 42:
         return False
     reached_42 = False # if reached_42 is True, then don't go through any more "if" statements, work back up the recursion tree
-    if n % 2 == 0:
+    if n % 2 == 0 and not reached_42:
         if bears(n / 2):
             reached_42 = True
-    if n % 3 == 0 or n % 4 == 0:
+    if n % 3 == 0 or n % 4 == 0 and not reached_42:
         subtractor = n % 10 * ((n // 10) % 10)
         if subtractor != 0:
             if bears(n - subtractor):
                 reached_42 = True
-    if n % 5 == 0:
+    if n % 5 == 0 and not reached_42:
         if bears(n - 42):
             reached_42 = True
     return reached_42 # returns True up the recursion tree if reached_42
