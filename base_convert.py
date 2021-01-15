@@ -1,3 +1,7 @@
+# num is an int
+# b is an int
+# returns a string
+# Recursive function that returns a string representing num in the base b
 def convert(num, b):
     """ Recursive function that returns a string representing num in the base b
     Args:

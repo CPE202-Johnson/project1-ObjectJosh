@@ -3,6 +3,8 @@ If n is even, then you may give back n/2 bears.
 If n is divisible by 3 or 4, then you may multiply the last two digits of n and give back this many bears.
 If n is divisible by 5, then you may give back 42 bears.
 """
+# int to boolean
+# Recursive function that figures out if reaching 42 bears is possible with the given rules, using permutations
 def bears(n):
     """ Recursive function that figures out if reaching 42 bears is possible with the given rules, using permutations
     Args:

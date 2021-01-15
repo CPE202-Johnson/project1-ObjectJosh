@@ -4,6 +4,8 @@ For each character in the input string:
     Generate all permutations of the simpler string recursively (i.e. call the perm_gen_lex function with the simpler string)
     Add the removed character to the front of each permutation of the simpler string, and add the resulting permutation to the list 
 """
+# string to list
+# Recursive function that generates all the permutations of the characters in a string
 def perm_gen_lex(a):
     """ Recursive function that generates all the permutations of the characters in a string
     Args:
