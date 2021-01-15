@@ -12,7 +12,7 @@ def bears(n):
     """
     if n == 42:
         return True
-    if n < 42 or (n % 2 != 0 and n % 3 != 0 and n % 4 != 0 and n % 5 != 0):
+    if n < 42:
         return False
     reached_42 = False # if reached_42 is True, then don't go through any more "if" statements, work back up the recursion tree
     if n % 2 == 0 and not reached_42:
